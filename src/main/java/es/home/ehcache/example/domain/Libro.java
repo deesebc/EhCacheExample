@@ -4,6 +4,7 @@ package es.home.ehcache.example.domain;
 
 import java.util.Date;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name = "libro", catalog = "almacen")
 // necesario
-// @Cacheable
+@Cacheable
 public class Libro implements java.io.Serializable {
 
 	/**
